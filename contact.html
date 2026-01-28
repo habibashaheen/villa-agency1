@@ -27,6 +27,8 @@ https://templatemo.com/tm-591-villa-agency
 --> <select name="language" id="dropdownMenuLangButton" style="height:50px">
 <option value="en">English</option>
 <option value="ar">Arabic</option>
+  <option value="fr">French</option>
+
 </select>
   </head>
 
@@ -37,7 +39,7 @@ var scriptElement = document.getElementById("customScript");
 var elementId = scriptElement.getAttribute("elementId");
 var dropdown = document.getElementById(elementId);
 if (!dropdown) {
-console.error('Element with id "350" not found.'');
+console.error('Element with id "350" not found.');
 }
 window.onload = function () {
 var savedLocale = sessionStorage.getItem("locale");
