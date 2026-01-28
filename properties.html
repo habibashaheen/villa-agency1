@@ -92,6 +92,30 @@ https://templatemo.com/tm-591-villa-agency
         </div>
     </div>
   </header>
+  <select name="language" id="dropdownMenuLangButton" style="height:50px">
+<option value="en">English</option>
+<option value="ar">Arabic</option>
+</select>
+  <script src="https://webautopilot.ai/translation/js/embedCustom.js" id="customScript" domainId="350" tl="en" elementId="dropdownMenuLangButton"></script>
+  <script>
+var scriptElement = document.getElementById("customScript");
+var elementId = scriptElement.getAttribute("elementId");
+var dropdown = document.getElementById(elementId);
+if (!dropdown) {
+console.error('Element with id "350" not found.'');
+}
+window.onload = function () {
+var savedLocale = sessionStorage.getItem("locale");
+if (savedLocale) {
+dropdown.value = savedLocale;
+scriptElement.setAttribute("tl", savedLocale);
+} };
+dropdown.addEventListener("change", function () {
+var selectedLang = dropdown.value;
+scriptElement.setAttribute("tl", selectedLang);
+sessionStorage.setItem("locale", selectedLang);
+});
+</script>
   <!-- ***** Header Area End ***** -->
 
   <div class="page-heading header-text">
